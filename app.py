@@ -3,18 +3,14 @@ import pickle
 import re
 import numpy as np
 
-# -----------------------------
-# PAGE CONFIG
-# -----------------------------
+
 st.set_page_config(
     page_title="Veda AI",
     page_icon="🎓",
     layout="wide"
 )
 
-# -----------------------------
-# DARK THEME CUSTOM CSS
-# -----------------------------
+
 st.markdown("""
 <style>
 .stApp {
@@ -40,9 +36,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# -----------------------------
-# LOAD MODEL
-# -----------------------------
 @st.cache_resource
 def load_model():
     with open("difficulty_model.pkl", "rb") as f:
@@ -53,17 +46,12 @@ def load_model():
 
 model, vectorizer = load_model()
 
-# -----------------------------
-# TEXT CLEANING
-# -----------------------------
+
 def clean_text(text):
     text = str(text).lower()
     text = re.sub(r"[^\w\s]", "", text)
     return text
 
-# -----------------------------
-# HEADER
-# -----------------------------
 col1, col2, col3 = st.columns([1.5,4,1])
 
 with col1:
@@ -78,9 +66,6 @@ with col3:
 
 st.divider()
 
-# -----------------------------
-# EXAMPLE QUESTIONS
-# -----------------------------
 st.markdown('<div class="section-title">🧪 Example Questions</div>', unsafe_allow_html=True)
 
 st.markdown("""
@@ -98,9 +83,7 @@ st.markdown("""
 
 st.divider()
 
-# -----------------------------
-# LIVE PREDICTION SECTION
-# -----------------------------
+
 st.markdown('<div class="section-title">🔍 Live Prediction</div>', unsafe_allow_html=True)
 
 question_input = st.text_area(
@@ -113,9 +96,7 @@ topic_input = st.selectbox("Select Topic", topic_list)
 
 predict_button = st.button("Predict Difficulty")
 
-# -----------------------------
-# PREDICTION LOGIC
-# -----------------------------
+
 if predict_button:
 
     if question_input.strip() == "":
@@ -139,9 +120,7 @@ if predict_button:
 
         st.write(f"Confidence Score: **{round(confidence*100,2)}%**")
 
-# -----------------------------
-# ANALYTICS DASHBOARD
-# -----------------------------
+
 st.divider()
 st.markdown('<div class="section-title">📊 Dataset Analytics</div>', unsafe_allow_html=True)
 
@@ -155,8 +134,6 @@ with colY:
 
 st.image("media/pic4.png", use_container_width=True)
 
-# -----------------------------
-# FOOTER
-# -----------------------------
+
 st.markdown("---")
 st.caption("Developed as part of GenAI | Veda")
