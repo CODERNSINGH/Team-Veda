@@ -1,0 +1,85 @@
+year,section,question_number,question_text,question_type,marks,difficulty_label,topic,answer_text
+2016,Section A (C++),1a,Out of the following find those identifiers which cannot be used for naming Variable Constants or Functions in C++: Total*Tax double Case My Name NeW switch Column31 _Amount,Short Answer,2,medium,C++ Identifiers,Total*Tax (special char *) double (reserved keyword) My Name (contains space) switch (reserved keyword)
+2016,Section A (C++),1b,Write the names of header files required to be included in: void main(){double X Times Result; cin>>X>>Times; Result=pow(X Times); cout<<Result<<endl;},Very Short Answer,1,easy,C++ Header Files,iostream.h (or iomanip.h) for cin/cout; math.h (or complex.h) for pow()
+2016,Section A (C++),1c,Rewrite C++ code removing syntactical errors: #define Formula(a b) = 2*a+b  void main(){float X=3.2;Y=4.1; Z=Formula(X Y); cout<<Result=<<Z<<endl;},Short Answer,2,medium,C++ Syntax,"#define Formula(a b) 2*a+b; float X=3.2 Y=4.1; float Z=Formula(X Y); cout<<""Result=""<<Z<<endl"
+2016,Section A (C++),1d,"Find output of C++ program: TEXT Str=""HARMONIOUS""; JumbleUp(Str); cout<<Str<<endl; where JumbleUp swaps adjacent chars then replaces odd-position chars between M-U with @",Short Answer,2,medium,C++ Arrays and Strings,AHM@N@OIS@
+2016,Section A (C++),1e,Find output: Share S T U; S.GetCode(1324 350); T.GetCode(1435 250); S.Update(50 28); U.Update(-25 26); S.Status(); T.Status(); U.Status();,Long Answer,3,hard,C++ Classes and Objects,"Date:28
+1324#400
+Date:1
+1435#250
+Date:26
+1000#75"
+2016,Section A (C++),1f,Find possible outputs and max/min PICKER: PICKER=1+random(3); COLOR={BLUE PINK GREEN RED}; nested loop printing COLOR[J] for J 0 to I,Short Answer,2,medium,C++ Loops and Arrays,Options (ii) and (iv) are possible. Min PICKER=1 Max PICKER=3
+2016,Section A (C++),2a,Write any four important characteristics of Object Oriented Programming. Give example of any one using C++.,Short Answer,2,medium,OOP Concepts,1.Encapsulation 2.Data Hiding 3.Polymorphism 4.Inheritance. Example: class student{int rno; char name[20]; public: void input(){cin>>rno; gets(name);}}
+2016,Section A (C++),2b(i),Which OOP concept is illustrated by default constructor BOOK() and parameterized constructor BOOK(int C char T[] float P) combined together?,Very Short Answer,1,easy,OOP - Polymorphism,Polymorphism (Constructor Overloading)
+2016,Section A (C++),2b(ii),How many times will Book Discarded! be displayed? Which line is responsible?,Very Short Answer,1,easy,C++ Destructors,2 times. Line 9 (closing brace of main)
+2016,Section A (C++),2c,Write class CITY in C++ with private: Ccode CName Pop KM Density DenCal(); public: Record() View() (shows Highly Populated City if Density>10000),Long Answer,4,hard,C++ Classes and Objects,"class CITY{int Ccode; char CName[20]; long int Pop; float KM Density; void DenCal(); public: void Record(); void View();}; void CITY::DenCal(){Density=Pop/KM;} void CITY::Record(){cin>>Ccode; gets(CName); cin>>Pop>>KM; DenCal();} void CITY::View(){cout<<Ccode<<CName<<Pop<<KM<<Density; if(Density>10000)cout<<""Highly Populated City"";}"
+2016,Section A (C++),2d(i),Which type of inheritance is shown: class SALEPOINT : public ITEM private TRADER?,Very Short Answer,1,easy,C++ Inheritance,Multiple Inheritance
+2016,Section A (C++),2d(ii),Write all data members directly accessible from member functions of class SALEPOINT.,Very Short Answer,1,easy,C++ Inheritance,Name Location Manager Qty
+2016,Section A (C++),2d(iii),Write all member functions directly accessible by an object of class SALEPOINT.,Very Short Answer,1,easy,C++ Inheritance,EnterAll() ViewAll() Enter() View()
+2016,Section A (C++),2d(iv),What is the order of constructor execution when SALEPOINT object is declared?,Very Short Answer,1,easy,C++ Inheritance,1.ITEM() 2.TRADER() 3.SALEPOINT()
+2016,Section A (C++),3a,Write FixSalary(float Salary[] int N) to modify: <100000 add 35% >=100000 and <200000 add 30% >=200000 add 20%,Short Answer,2,medium,C++ Functions and Arrays,void FixSalary(float Salary[] int N){for(int i=0;i<N;i++){if(Salary[i]<100000) Salary[i]+=0.35*Salary[i]; else if(Salary[i]<200000) Salary[i]+=0.3*Salary[i]; else Salary[i]+=0.20*Salary[i];}}
+2016,Section A (C++),3b,R[10][50] row-major 8 bytes/element. Find address of R[5][15] given R[8][10] is at 45000.,Short Answer,3,medium,Arrays - Memory Allocation,BaseAddress=41720. LOC(R[5][15])=41720+8*(5*50+15)=41720+2120=43840
+2016,Section A (C++),3c,Write DELETE() for class QUEUE to remove a product from dynamically allocated Queue.,Long Answer,4,hard,C++ Linked List and Queue,"void QUEUE::DELETE(){if(F!=NULL){PRODUCT *T=F; cout<<T->PID<<T->PNAME; F=F->Next; delete T; if(F==NULL) R=NULL;} else cout<<""Queue Empty"";}"
+2016,Section A (C++),3d,Write DISPMID(int A[][5] int R int C) to display elements of middle row and middle column.,Short Answer,3,medium,C++ 2D Arrays,"void DISPMID(int A[][5] int R int C){for(int J=0;J<C;J++) cout<<A[R/2][J]<<"" ""; cout<<endl; for(int I=0;I<R;I++) cout<<A[I][C/2]<<"" "";}"
+2016,Section A (C++),3e,Convert Infix to Postfix showing stack contents: P/(Q-R)*S+T,Short Answer,2,medium,Data Structures - Stack,Postfix: PQR-/S*T+
+2016,Section A (C++),4a,Write DISP3CHAR() to read KIDINME.TXT and display all words with exactly 3 characters.,Short Answer,2,medium,C++ File Handling,"void DISP3CHAR(){ifstream Fil; Fil.open(""KIDINME.TXT""); char W[20]; Fil>>W; while(!Fil.eof()){if(strlen(W)==3) cout<<W<<"" ""; Fil>>W;} Fil.close();}"
+2016,Section A (C++),4b,Write ONOFFER() to read binary file TOYS.DAT and display toys with Status=ON OFFER.,Short Answer,3,medium,C++ Binary File Handling,"void ONOFFER(){TOYS T; ifstream fin; fin.open(""TOYS.DAT"" ios::binary); while(fin.read((char*)&T sizeof(T))){if(strcmp(T.SeeOffer() ""ON OFFER"")==0) T.View();} fin.close();}"
+2016,Section A (C++),4c,Find output of code reading CLIENT.DAT: after 1 read cout tellg/sizeof; after 2 more reads cout tellg/sizeof,Very Short Answer,1,easy,C++ File Handling,"Rec:1
+Rec:3"
+2016,Section B (Python),1a,Find identifiers that cannot be used in Python: Total*Tax While class switch 3rdRow finally Column31 _Total,Short Answer,2,medium,Python Identifiers,Total*Tax (special char *) class (keyword) 3rdRow (starts with digit) finally (keyword)
+2016,Section B (Python),1b,Name Python Library modules to import for: (i) sqrt() (ii) dump(),Very Short Answer,1,easy,Python Library Modules,(i) math (ii) pickle
+2016,Section B (Python),1c,Rewrite removing syntax errors: for Name in [Ramesh Suraj Priya] IF Name[0]=S: print(Name),Short Answer,2,medium,Python Syntax,"for Name in [""Ramesh"" ""Suraj"" ""Priya""]: if Name[0]==""S"": print(Name)"
+2016,Section B (Python),1d,Find output: Values=[10 20 30 40]; for Val in Values: for I in range(1 Val%9): print(I * end=); print(),Short Answer,2,medium,Python Loops,"1*
+1*2*
+1*2*3*
+(blank line for last value)"
+2016,Section B (Python),1e,Find output of Python Book class code: s=Book() t=Book(200) u=Book(300 Made Easy); ShowVal all 3; then Assign and ShowVal again,Long Answer,3,hard,Python Classes,"100 # Python
+200 # Python
+300 # Made Easy
+105 # Made Python
+215 # Easy Python
+325 # Made EasyMade Easy"
+2016,Section B (Python),1f,Find possible outputs and max/min PICKER: PICKER=random.randint(0 3); nested loop printing I end= for range(1 PICKER) then newline,Short Answer,2,medium,Python Loops and Random,Options (i) and (iv) are possible. Min PICKER=0 Max PICKER=3
+2016,Section B (Python),2a,What is difference between Multilevel and Multiple inheritance? Give examples for both.,Short Answer,2,medium,Python OOP - Inheritance,Multilevel: chain A->B->C. Multiple: class C(A B) two parents. Example Multilevel: class C(B) where class B(A). Example Multiple: class C(A B).
+2016,Section B (Python),2b,Output of try-except code with inputs AMAR THREE A123 1200? Explain try and except used.,Short Answer,2,medium,Python Exception Handling,Prompts Re-enter integer 3 times then prints 6. try attempts int conversion; except ValueError handles non-integer input and increments Start by 2.
+2016,Section B (Python),2c,Write class CITY in Python with Ccode CName Pop KM Density and DenCal() Record() View() methods.,Long Answer,4,hard,Python Classes,"class CITY:
+ def __init__(self): self.Ccode=0; self.CName=""""; self.Pop=0; self.KM=0; self.Density=0
+ def DenCal(self): self.Density=self.Pop/self.KM
+ def Record(self): [input fields]; self.DenCal()
+ def View(self): print(all); if self.Density>10000: print(""Highly Populated City"")"
+2016,Section B (Python),2d,How to implement abstract method in Python? Give example.,Short Answer,2,medium,Python OOP - Abstract Methods,Abstract method: unimplemented method in base class. Derived class defines it or raises NotImplementedError. Example: class Shape: def findArea(self): pass; class Square(Shape): def findArea(self): return self.side*self.side
+2016,Section B (Python),2e,What is significance of super() method? Give example.,Short Answer,2,medium,Python OOP - Inheritance,"super() calls base class methods from derived class. Example: class GradStudent(Student): def __init__(self): super(GradStudent self).__init__(); self.subject="""""
+2016,Section B (Python),3a,Show list after First Second Third pass of Selection Sort (descending): 12 14 -54 64 90 24,Short Answer,3,medium,Python - Sorting Algorithms,"Pass1: 90 14 -54 64 12 24
+Pass2: 90 64 -54 14 12 24
+Pass3: 90 64 24 14 12 -54"
+2016,Section B (Python),3b,Write Binary Search method for descending-order list. Return position or -1 if not found.,Short Answer,2,medium,Python - Binary Search,def binarysrch(nums x): high=len(nums); low=0; while low<high: mid=(low+high)//2; midval=nums[mid]; if midval>x: low=mid+1; elif midval<x: high=mid; else: return mid; return -1
+2016,Section B (Python),3c,Write Insert(City) and Delete(City) methods in Python for Queue data structure.,Long Answer,4,hard,Python - Queue Data Structure,"class queue: city=[]; def Insert(self): a=input(); queue.city.append(a); def Delete(self): if queue.city==[]: print(""Queue empty""); else: print(queue.city[0]); queue.city.pop(0)"
+2016,Section B (Python),3d,Write method to find and display prime numbers between 2 to N. Pass N as argument.,Short Answer,3,medium,Python - Prime Numbers,def prime(N): for a in range(2 N): Prime=1; for I in range(2 a): if a%I==0: Prime=0; if Prime==1: print(a)
+2016,Section B (Python),3e,Evaluate postfix expression showing stack status after every step: 12 2 / 34 20 - + 5 +,Short Answer,2,medium,Data Structures - Stack Evaluation,Steps: 12->12; 2->12 2; /->6; 34->6 34; 20->6 34 20; -->6 14; +->20; 5->20 5; +->25. Result=25
+2016,Section B (Python),4a,Write Python statements to: (i) open MYPET.TXT in write mode (ii) open MYPET.TXT in read mode,Very Short Answer,1,easy,Python File Handling,"f1=open(""MYPET.TXT"" ""w""); f2=open(""MYPET.TXT"" ""r"")"
+2016,Section B (Python),4b,Write Python method to write multiple lines of text into text file daynote.txt,Short Answer,2,medium,Python File Handling,"def writel(): f=open(""daynote.txt"" ""w""); while True: line=input(); f.write(line); if input(""More?"")==""N"": break; f.close()"
+2016,Section B (Python),4c,Write method to search pickled file emp.dat and display record where Empno matches A0005.,Short Answer,3,medium,Python File Handling - Pickle,"def search(): f=open(""emp.dat"" ""rb""); try: while True: e=pickle.load(f); if e.Empno==""A0005"": e.Display(); except EOFError: pass; f.close()"
+2016,Section C,5a,Observe PARTICIPANTS (3 rows) and EVENTS (2 rows) tables. Name RDBMS operation producing 6-row RESULT. Find Degree and Cardinality.,Short Answer,2,medium,SQL - RDBMS Operations,Cartesian Product. Degree=4. Cardinality=6
+2016,Section C,5b(i),Display CNO CNAME TRAVELDATE from TRAVEL in descending order of CNO.,Very Short Answer,1,easy,SQL Queries,SELECT CNO CNAME TRAVELDATE FROM TRAVEL ORDER BY CNO DESC;
+2016,Section C,5b(ii),Display CNAME of customers travelling by vehicle V01 or V02.,Very Short Answer,1,easy,SQL Queries,"SELECT CNAME FROM TRAVEL WHERE VCODE=""V01"" OR VCODE=""V02"";"
+2016,Section C,5b(iii),Display CNO and CNAME for customers who travelled between 2015-12-31 and 2015-05-01.,Very Short Answer,1,easy,SQL Queries,"SELECT CNO CNAME FROM TRAVEL WHERE TRAVELDATE BETWEEN ""2015-05-01"" AND ""2015-12-31"";"
+2016,Section C,5b(iv),Display all details from TRAVEL for customers with KM>120 in ascending order of NOP.,Very Short Answer,1,easy,SQL Queries,SELECT * FROM TRAVEL WHERE KM>120 ORDER BY NOP;
+2016,Section C,5b(v),Find output: SELECT COUNT(*) VCODE FROM TRAVEL GROUP BY VCODE HAVING COUNT(*)>1;,Very Short Answer,1,easy,SQL - Aggregate Functions,COUNT(*) VCODE: 2 V01; 2 V02
+2016,Section C,5b(vi),Find output: SELECT DISTINCT VCODE FROM TRAVEL;,Very Short Answer,1,easy,SQL Queries,V01 V02 V03 V04 V05
+2016,Section C,5b(vii),Find output: SELECT A.VCODE CNAME VEHICLETYPE FROM TRAVEL A VEHICLE B WHERE A.VCODE=B.VCODE AND KM<90;,Very Short Answer,1,easy,SQL - Joins,V02 Ravi Anish AC DELUXE BUS; V04 John Malina CAR
+2016,Section C,5b(viii),Find output: SELECT CNAME KM*PERKM FROM TRAVEL A VEHICLE B WHERE A.VCODE=B.VCODE AND A.VCODE=V05;,Very Short Answer,1,easy,SQL - Joins,Sahanubhuti 2700
+2016,Section C,6a,Verify using Boolean Laws: X+ Y Z = X.Y.Z+ X.Y.Z+ XY.Z+ X.Y.Z+ X.Y.Z,Short Answer,2,medium,Boolean Algebra,LHS: X+YZ expanded using distribution gives all 5 minterms matching RHS. Verified.
+2016,Section C,6b,Write Boolean Expression for Logic Circuit with inputs P Q R and output G.,Short Answer,2,medium,Boolean Algebra - Logic Gates,P.Q + P.R + Q.R
+2016,Section C,6c,Derive Canonical SOP for G(A B C) from truth table with G=1 for minterms 0 2 6 7.,Very Short Answer,1,easy,Boolean Algebra - SOP,G(A B C) = A.B.C + A.B.C + A.B.C + A.B.C = Sigma(0 2 6 7)
+2016,Section C,6d,Reduce using K-Map: F(P Q R S) = Sigma(0 4 5 8 9 10 11 12 13 15),Short Answer,3,medium,Boolean Algebra - K-Map,F(P Q R S) = RS + PQ + QR + PS
+2016,Section C,7a,Differentiate between PAN and LAN types of networks.,Very Short Answer,1,easy,Networking,PAN: Personal Area Network around individual person. LAN: Local Area Network within confined area up to 1 km.
+2016,Section C,7b,Which protocol helps transfer files to and from a remote computer?,Very Short Answer,1,easy,Networking - Protocols,FTP (File Transfer Protocol)
+2016,Section C,7c,Write two advantages of 3G over 2G in terms of speed and services.,Very Short Answer,1,easy,Networking - Mobile Technologies,Speed: Faster web browsing faster file transfer. Services: Better video clarity better security.
+2016,Section C,7d,Write two characteristics of Web 2.0.,Very Short Answer,1,easy,Internet and Web Technologies,1. Interactive through social media. 2. Easy online information exchange and collaboration.
+2016,Section C,7e,What is the basic difference between Computer Worm and Trojan Horse?,Very Short Answer,1,easy,Cybersecurity,Trojan Horse: disguised malware user installs voluntarily. Computer Worm: self-replicating program spreading through network without user action.
+2016,Section C,7f,Categorise JavaScript ASP VBScript JSP under Client side and Server Side scripts.,Very Short Answer,1,easy,Internet - Web Scripting,Client Side: JavaScript VBScript. Server Side: ASP JSP.
+2016,Section C,7g(i),Suggest best SERVER location in YHUB (Village1 Village2 Village3 YTown). Justify.,Very Short Answer,1,easy,Networking - Network Planning,YTOWN - maximum computers (100) and closest to all other locations.
+2016,Section C,7g(ii),Suggest best wired medium and cable layout to connect YHUB locations.,Very Short Answer,1,easy,Networking - Network Topology,Optical Fiber cable. Star topology with YTOWN at center.
+2016,Section C,7g(iii),Which hardware device connects all computers within each YHUB location?,Very Short Answer,1,easy,Networking - Hardware Devices,Switch (or Hub)
+2016,Section C,7g(iv),Which service/protocol enables live interaction between Head Office experts and YHUB?,Very Short Answer,1,easy,Networking - Communication Protocols,Videoconferencing (or VoIP)
