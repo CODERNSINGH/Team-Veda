@@ -1,0 +1,9 @@
+year,section,question_number,question_text,question_type,marks,difficulty_label,topic,answer_text
+"2024","A","1","What is the output of print(2**3)?","MCQ","1","easy","Python Basics","8"
+"2024","A","2","Which data structure uses LIFO?","MCQ","1","easy","Data Structures","Stack"
+"2024","B","3a","Write a function to check palindrome","Short","2","medium","Functions","def is_palindrome(s): return s == s[::-1]"
+"2024","B","3b","Explain recursion with an example","Short","3","medium","Functions","Recursion is a function calling itself..."
+"2024","C","4","Design a class hierarchy for a library management system","Long","5","hard","OOP","class Library: ..."
+"2024","C","5","Implement binary search using recursion and analyze its time complexity","Long","5","hard","Algorithms","def binary_search(arr, target, low, high): ..."
+"2024","A","6","What is the purpose of __init__ in Python?","MCQ","1","easy","OOP","Constructor method"
+"2024","B","7","Write SQL query to find second highest salary","Short","3","medium","SQL","SELECT MAX(salary) FROM emp WHERE salary < (SELECT MAX(salary) FROM emp)"
